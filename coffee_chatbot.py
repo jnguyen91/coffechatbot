@@ -12,24 +12,24 @@ def coffee_bot():
 
 
 def get_size():
-  res = input('What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ')
-  if res == 'a' or res == 'A':
+  res = input('What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ').lower()
+  if res == 'a':
     return 'small'
-  elif res == 'b' or res == 'B':
+  elif res == 'b':
     return 'medium'
-  elif res == 'c' or res == 'C':
+  elif res == 'c':
     return 'large'
   else:
     print_message()
     return get_size()
 
 def get_drink_type():
-  res = input("what type of drink would you like? \n[a] Brewed Coffee \n[b] Mocha \n[c] Latte \n> ")
-  if res == 'a' or res == 'A':
+  res = input("what type of drink would you like? \n[a] Brewed Coffee \n[b] Mocha \n[c] Latte \n> ").lower()
+  if res == 'a':
     return "Brewed Coffee"
-  elif res == 'b' or res == 'B':
+  elif res == 'b':
     return "Mocha"
-  elif res == 'c' or res == 'C':
+  elif res == 'c':
     return order_latte()
     
   else:
@@ -37,12 +37,12 @@ def get_drink_type():
     return get_drink_type()
   
 def order_latte():
-  res = input("And what kind of milk for your latte? \n[a] 2% milk \n[b] Non-fat milk \n[c] Soy milk \n>")
-  if res == 'a' or res == 'A':
+  res = input("And what kind of milk for your latte? \n[a] 2% milk \n[b] Non-fat milk \n[c] Soy milk \n>").lower()
+  if res == 'a':
     return 'latte'
-  elif res == 'b' or res == 'B':
+  elif res == 'b':
     return 'non-fat latte'
-  elif res == 'c' or res == 'C':
+  elif res == 'c':
     return 'soy latte'
   else:
     print_message()
